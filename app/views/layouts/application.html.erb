@@ -42,9 +42,10 @@
             </li>
             <% if user_signed_in? %>
               <li class="nav-item">
-        <%= link_to "Se déconnecter", destroy_user_session_path , method: :delete, class: "btn btn-danger" %>
-        </li>
-      <% else %>
+              <a class="btn btn-warning" href=<%= edit_user_registration_path %> >Edit </a>
+              <%= link_to "Se déconnecter", destroy_user_session_path , method: :delete, class: "btn btn-danger" %>
+              </li>
+             <% else %>
               <li class="nav-item">
                 <a class="btn btn-info" href=<%= new_user_session_path %> >Se connecter</a>
               </li>

@@ -115,7 +115,11 @@ GEM
     nokogiri (1.8.4)
       mini_portile2 (~> 2.3.0)
     orm_adapter (0.5.0)
+<<<<<<< HEAD
     pg (1.1.0)
+=======
+    pg (1.0.0)
+>>>>>>> 19f2be10f7e63a1652abdf972ec20067298ad225
     public_suffix (3.0.3)
     puma (3.12.0)
     rack (2.0.5)
@@ -234,4 +238,8 @@ RUBY VERSION
    ruby 2.5.1p57
 
 BUNDLED WITH
+<<<<<<< HEAD
    1.16.2
+=======
+   1.16.4
+>>>>>>> 19f2be10f7e63a1652abdf972ec20067298ad225
