@@ -1,6 +1,6 @@
 nb_de_user = 10
-nb_d_item = 5
-nb_de_cart = 0
+nb_d_item = 20
+nb_de_cart = 5
 cart_a_remplir = 3
 
 require 'faker'
@@ -46,7 +46,7 @@ puts
 # => ----        REMPLISSAGE DES CARTS 3 & 5
 # ---------------------------------------------------
 
-
+puts
 puts "---- REMPLISSAGE DU CART #{cart_a_remplir} ----"
 4.times do
   x = rand(1..Item.last.id)
@@ -70,6 +70,7 @@ end
 
 
 cart_a_remplir = 5
+puts
 puts "---- REMPLISSAGE DU CART #{cart_a_remplir} ----"
 2.times do
   x = rand(1..Item.last.id)
