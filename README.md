@@ -1,7 +1,6 @@
 # README
 
-## Base de Donnée, model utilisé
-Intransitive Associations
+## Model Base de donnée Card - Item -> Intransitive Associations
 > https://www.sitepoint.com/master-many-to-many-associations-with-activerecord/
 
 

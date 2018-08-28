@@ -1,5 +1,5 @@
 class User < ApplicationRecord
-	belongs_to :card, required: false
+	belongs_to :cart, required: false
 
 	
   # Include default devise modules. Others available are:
