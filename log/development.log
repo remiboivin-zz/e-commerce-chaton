@@ -44779,3 +44779,119 @@ FOREIGN KEY ("cart_id")
   ↳ db/seeds.rb:55
   [1m[36mStore Load (1.1ms)[0m  [1m[34mSELECT "stores".* FROM "stores" WHERE "stores"."cart_id" = ?[0m  [["cart_id", 3]]
   ↳ db/seeds.rb:64
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[36mItem Exists (0.8ms)[0m  [1m[34mSELECT  1 AS one FROM "items" WHERE "items"."image_url" = ? LIMIT ?[0m  [["image_url", "chaton0.jpg"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:10
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.3ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[36mItem Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "items" WHERE "items"."image_url" = ? LIMIT ?[0m  [["image_url", "chaton1.jpg"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:10
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[36mItem Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "items" WHERE "items"."image_url" = ? LIMIT ?[0m  [["image_url", "chaton2.jpg"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:10
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[36mItem Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "items" WHERE "items"."image_url" = ? LIMIT ?[0m  [["image_url", "chaton3.jpg"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:10
+  [1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:22
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "karlyn@skilesfahey.com"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:22
+  [1m[36mUser Create (1.0ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["email", "karlyn@skilesfahey.com"], ["encrypted_password", "$2a$11$QvH5tDBMCKSujWyIFMcIKeE6Gz83Ggr4JKiGSkQOcN6sW5K.Uk9n6"], ["created_at", "2018-08-28 17:25:56.931489"], ["updated_at", "2018-08-28 17:25:56.931489"]]
+  ↳ db/seeds.rb:22
+  [1m[35m (10.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:22
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:22
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "vanherzog@marquardtarmstrong.co"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:22
+  [1m[36mUser Create (0.8ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["email", "vanherzog@marquardtarmstrong.co"], ["encrypted_password", "$2a$11$Pin/7BZ5zAuJVZMCr9bW3eQd59WolSuHz7y8GzvN1sMXXOYoPdALy"], ["created_at", "2018-08-28 17:25:57.216734"], ["updated_at", "2018-08-28 17:25:57.216734"]]
+  ↳ db/seeds.rb:22
+  [1m[35m (14.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:22
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:22
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "frederick@terry.info"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:22
+  [1m[36mUser Create (0.8ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["email", "frederick@terry.info"], ["encrypted_password", "$2a$11$ORgNq3dfKgTZi2wqUcz7Z.vGp6ImySaJAFg0ha8UdjvWqDvAJztCm"], ["created_at", "2018-08-28 17:25:57.504575"], ["updated_at", "2018-08-28 17:25:57.504575"]]
+  ↳ db/seeds.rb:22
+  [1m[35m (10.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:22
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:36
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ db/seeds.rb:36
+  [1m[36mCart Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "carts" WHERE "carts"."user_id" = ? LIMIT ?[0m  [["user_id", 3], ["LIMIT", 1]]
+  ↳ db/seeds.rb:36
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  ↳ db/seeds.rb:36
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:36
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ db/seeds.rb:36
+  [1m[36mCart Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "carts" WHERE "carts"."user_id" = ? LIMIT ?[0m  [["user_id", 3], ["LIMIT", 1]]
+  ↳ db/seeds.rb:36
+  [1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+  ↳ db/seeds.rb:36
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:36
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ db/seeds.rb:36
+  [1m[36mCart Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "carts" WHERE "carts"."user_id" = ? LIMIT ?[0m  [["user_id", 1], ["LIMIT", 1]]
+  ↳ db/seeds.rb:36
+  [1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+  ↳ db/seeds.rb:36
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:36
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ db/seeds.rb:36
+  [1m[36mCart Exists (0.8ms)[0m  [1m[34mSELECT  1 AS one FROM "carts" WHERE "carts"."user_id" = ? LIMIT ?[0m  [["user_id", 2], ["LIMIT", 1]]
+  ↳ db/seeds.rb:36
+  [1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+  ↳ db/seeds.rb:36
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:36
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ db/seeds.rb:36
+  [1m[36mCart Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "carts" WHERE "carts"."user_id" = ? LIMIT ?[0m  [["user_id", 3], ["LIMIT", 1]]
+  ↳ db/seeds.rb:36
+  [1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+  ↳ db/seeds.rb:36
+  [1m[36mItem Load (0.7ms)[0m  [1m[34mSELECT  "items".* FROM "items" ORDER BY "items"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ db/seeds.rb:53
+  [1m[35m (0.3ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:55
+  [1m[36mItem Load (0.5ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ db/seeds.rb:55
+  [1m[36mCart Load (0.4ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ db/seeds.rb:55
+  [1m[36mStore Create (0.7ms)[0m  [1m[32mINSERT INTO "stores" ("item_id", "cart_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["item_id", 2], ["cart_id", 4], ["created_at", "2018-08-28 17:25:57.670705"], ["updated_at", "2018-08-28 17:25:57.670705"]]
+  ↳ db/seeds.rb:55
+  [1m[35m (9.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:55
+  [1m[36mItem Load (0.3ms)[0m  [1m[34mSELECT  "items".* FROM "items" ORDER BY "items"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ db/seeds.rb:53
+  [1m[35m (0.3ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:55
+  [1m[36mItem Load (0.3ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ db/seeds.rb:55
+  [1m[36mCart Load (0.2ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ db/seeds.rb:55
+  [1m[36mStore Create (0.8ms)[0m  [1m[32mINSERT INTO "stores" ("item_id", "cart_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["item_id", 2], ["cart_id", 4], ["created_at", "2018-08-28 17:25:57.693445"], ["updated_at", "2018-08-28 17:25:57.693445"]]
+  ↳ db/seeds.rb:55
+  [1m[35m (6.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:55
+  [1m[36mStore Load (0.6ms)[0m  [1m[34mSELECT "stores".* FROM "stores" WHERE "stores"."cart_id" = ?[0m  [["cart_id", 4]]
+  ↳ db/seeds.rb:64

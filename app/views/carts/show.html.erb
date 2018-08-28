@@ -4,31 +4,7 @@
 	<title>CART - PANIER</title>
 </head>
 <body>
-	<div>
-		lorem
-	</div>
-
-	<div class="jumbotron">
-		<h2>
-			Bonjour <%= @name_user %>,
-		</h2>
-		<br>Vous êtes l'ID N°<%= @id_user %>
-	</div>
-
-	<%= @cart %>
-	<br>
-	Ton cart possède l'id <%= @cart_id %>
-	<h2>VOS ITEMS :</h2>
-
-	<% @cart.each do |store| %>
-		<ul>
-			<li> 
-				<%= Item.find(store.item_id).title %> -> <%= Item.find(store.item_id).price %> 
-				<a class="btn-danger" href="/carts/edit/<%= store.item_id%>">DELETE</a>
-			</li>
-		</ul>
-	<% end %>
-
+	
 	<div class="wrapper">
 		<div class="info-cart">
 			<span>Email :</span> <%= @name_user %><br>
@@ -51,9 +27,9 @@
 				<% @cart.each_with_index do |item, i| %>
 				<tr>
 				<th scope="row"><%= i+1 %></th>
-				<td><%= item.title %></td>
-				<td><%= item.price %> </td>
-				<td><a class="btn-suppr" href="" %>Supprimer</a></td>
+				<td><%= Item.find(item.item_id).title %></td>
+				<td><%= Item.find(item.item_id).price %> </td>
+				<td><a class="btn-suppr" href="/carts/edit/<%= item.item_id%>" >Supprimer</a></td>
 				</tr>
 				<% end %>
 			</tbody>
