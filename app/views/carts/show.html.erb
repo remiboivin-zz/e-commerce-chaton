@@ -4,31 +4,39 @@
 	<title>CART - PANIER</title>
 </head>
 <body>
-	<div>
-		lorem
-	</div>
-
-	<div class="jumbotron">
-		<h2>
-			Bonjour <%= @name_user %>,
-		</h2>
-		<br>Vous êtes l'ID N°<%= @id_user %>
-	</div>
-
-
-	<%= @cart %>
+	
+	<div class="wrapper">
+		<div class="info-cart">
+			<span>Email :</span> <%= @name_user %><br>
+			<span>ID:</span> <%= @id_user %><br>
+			<span>Numéro du panier : <%= @cart_id %></span> 
+		</div>
 	<br>
-	Ton cart possède l'id <%= @cart_id %>
-	<h2>VOS ITEMS :</h2>
+	
+	<div class="container">
+		<table class="table">
+			<thead>
+				<tr>
+				<th scope="col">#</th>
+				<th scope="col">Article</th>
+				<th scope="col">Prix</th>
+				<th scope="col"> </th>
+				</tr>
+			</thead>
+			<tbody>
+				<% @cart.each_with_index do |item, i| %>
+				<tr>
+				<th scope="row"><%= i+1 %></th>
+				<td><%= Item.find(item.item_id).title %></td>
+				<td><%= Item.find(item.item_id).price %> </td>
+				<td><a class="btn-suppr" href="/carts/edit/<%= item.item_id%>" >Supprimer</a></td>
+				</tr>
+				<% end %>
+			</tbody>
+		</table>
+	</div>
 
-	<% @cart.each do |store| %>
-		<ul>
-			<li> 
-				<%= Item.find(store.item_id).title %> -> <%= Item.find(store.item_id).price %> 
-				<a class="btn-danger" href="/carts/edit/<%= store.item_id%>">DELETE</a>
-			</li>
-		</ul>
-	<% end %>
 
 </body>
 </html>
+
