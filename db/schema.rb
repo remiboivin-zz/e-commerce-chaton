@@ -12,15 +12,15 @@
 
 ActiveRecord::Schema.define(version: 2018_08_28_110609) do
 
-  create_table "cards", force: :cascade do |t|
+  create_table "carts", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "user_id"
-    t.index ["user_id"], name: "index_cards_on_user_id"
+    t.index ["user_id"], name: "index_carts_on_user_id"
   end
 
-  create_table "cards_items", id: false, force: :cascade do |t|
-    t.integer "card_id", null: false
+  create_table "carts_items", id: false, force: :cascade do |t|
+    t.integer "cart_id", null: false
     t.integer "item_id", null: false
   end
 
@@ -42,8 +42,8 @@ ActiveRecord::Schema.define(version: 2018_08_28_110609) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "address"
-    t.integer "card_id"
-    t.index ["card_id"], name: "index_users_on_card_id"
+    t.integer "cart_id"
+    t.index ["cart_id"], name: "index_users_on_cart_id"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
