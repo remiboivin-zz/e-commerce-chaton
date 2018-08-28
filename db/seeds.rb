@@ -9,8 +9,8 @@ require 'faker'
 20.times do |i|
   Item.create(
     title: Faker::Cat.name,
-    description: Faker::Cat.breed,
-    price: Faker::Stripe.ccv,
+    description: Faker::Movie.quote,
+    price: Faker::Number.decimal(2),
     image_url: "chaton#{i}.jpg"
   )
 
