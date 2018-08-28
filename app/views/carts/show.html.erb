@@ -1,29 +1,33 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title>CART - PANIER</title>
-</head>
-<body>
-	<div>
-		lorem
+<div class="wrapper">
+	<div class="info-cart">
+		<span>Email :</span> <%= @name_user %><br>
+		<span>ID:</span> <%= @id_user %><br>
+		<span>Numéro du panier : <%= @cart.id %></span> 
 	</div>
+	<br>
+<div class="container">
+	<table class="table">
+	<thead>
+		<tr>
+		<th scope="col">#</th>
+		<th scope="col">Article</th>
+		<th scope="col">Prix</th>
+		<th scope="col"> </th>
+		</tr>
+	</thead>
+	<tbody>
+		<% @cart.items.each_with_index do |item, i| %>
+		<tr>
+		<th scope="row"><%= i+1 %></th>
+		<td><%= item.title %></td>
+		<td><%= item.price %> </td>
+		<td><a class="btn-suppr" href="" %>Supprimer</a></td>
+		</tr>
+		<% end %>
+	</tbody>
+	</table>
+</div>
 
-	<div class="jumbotron">
-		<h2>
-			Bonjour <%= @name_user %>,
-		</h2>
-		<br>Vous êtes l'ID N°<%= @id_user %>
-	</div>
-
-
-	Ton cart possède l'id <%= @cart.id %>
-	<h2>VOS ITEMS :</h2>
-	<% @cart.items.each do |item| %>
-		<ul>
-			<li> <%= item.title %> -> <%= item.price %> </li>
-		</ul>
-	<% end %>
-
+</div> <!-- fin wrapper -->
 </body>
 </html>
->>>>>>> 5a6113d9c6d956fad7a147badc22f7faee7bb5c0

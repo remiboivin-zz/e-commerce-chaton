@@ -68,7 +68,7 @@ cart_a_remplir = 11
 # end
 
 
-cart_a_remplir = 6
+cart_a_remplir = 1
 puts
 puts "---- REMPLISSAGE DU CART #{cart_a_remplir} ----"
 4.times do

@@ -13,6 +13,7 @@
  *= require_tree .
  *= require_self
  */
+@import url("show.css")
 
 img.logo {
 	height: 50px;

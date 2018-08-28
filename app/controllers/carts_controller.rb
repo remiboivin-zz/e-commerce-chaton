@@ -1,12 +1,5 @@
 class CartsController < ApplicationController
   def index
-  	@id_user = current_user.id
-	mon_cart = Cart.create(user_id: @id_user)
-
-
-  	@name_user = current_user.email
-
-  	@cart = Cart.find_by(user_id: current_user.id)
   end
 
   def edit
@@ -16,6 +9,13 @@ class CartsController < ApplicationController
   end
 
   def show
+  	  	@id_user = current_user.id
+	mon_cart = Cart.create(user_id: @id_user)
+
+
+  	@name_user = current_user.email
+
+  	@cart = Cart.find_by(user_id: current_user.id)
   end
 end
 
