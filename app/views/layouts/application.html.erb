@@ -24,28 +24,33 @@
   </head>
 
   <body>
-      <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+      <nav class="navbar navbar-expand-lg navbar-dark bg-white fixed-top">
       <div class="container">
-        <a class="navbar-brand" href="#">LOGO</a>
+        <img class="logo" src="cat-logo.jpg">
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarResponsive">
           <ul class="navbar-nav ml-auto">
+            <!-- Affichage des liens divers -->
             <li class="nav-item active">
-              <a class="nav-link" href="#">Accueil
+              <a class="link-navbar" href="#">Accueil
                 <span class="sr-only">(current)</span>
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">A propos</a>
+              <a class="link-navbar" href="#">A propos</a>
             </li>
-            <% if user_signed_in? %>
+            <!-- Affichage des boutons Log in/Log out etc... -->
+            <% if user_signed_in? %> <!-- Connecté -->
               <li class="nav-item">
               <a class="btn btn-warning" href=<%= edit_user_registration_path %> >Edit </a>
               <%= link_to "Se déconnecter", destroy_user_session_path , method: :delete, class: "btn btn-danger" %>
               </li>
-             <% else %>
+              <li class="nav-item">
+                <img class="basket-icon" src="basket-icon.png" href="#">
+              </li>
+             <% else %> <!-- Pas connecté --> 
               <li class="nav-item">
                 <a class="btn btn-info" href=<%= new_user_session_path %> >Se connecter</a>
               </li>

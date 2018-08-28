@@ -6,12 +6,12 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 require 'faker'
-20.times do
+20.times do |i|
   Item.create(
     title: Faker::Cat.name,
     description: Faker::Cat.breed,
     price: Faker::Stripe.ccv,
-    image_url: Faker::Avatar.image
+    image_url: "chaton#{i}.jpg"
   )
 
 end
