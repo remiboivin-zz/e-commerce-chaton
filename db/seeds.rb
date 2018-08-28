@@ -1,7 +1,7 @@
 nb_de_user = 10
-nb_d_item = 5
-nb_de_cart = 0
-cart_a_remplir = 3
+nb_d_item = 20
+nb_de_cart = 5
+cart_a_remplir = 11
 
 require 'faker'
 
@@ -49,29 +49,6 @@ puts
 
 puts "---- REMPLISSAGE DU CART #{cart_a_remplir} ----"
 4.times do
-  x = rand(1..Item.last.id)
-  begin
-    puts "on tente ca"
-    Cart.find(cart_a_remplir).items << Item.find(x)
-    puts "Ajout de l'item N°#{x} dans le Cart N°#{cart_a_remplir}"
-  rescue Exception => e
-    puts "error :)\n Le cart #{cart_a_remplir} n'existe pas!!!"
-    break
-  end
-end
-puts "---- AFFICHAGE DU CART #{cart_a_remplir} ----"
-begin
-  Cart.find(cart_a_remplir).items.each do |item|
-    puts "#{item.title} -> #{item.price}$"
-  end
-rescue Exception => e
-  puts "Le Cart n'existe pas :)"
-end
-
-
-cart_a_remplir = 5
-puts "---- REMPLISSAGE DU CART #{cart_a_remplir} ----"
-2.times do
   x = rand(1..Item.last.id)
   begin
     puts "on tente ca"
