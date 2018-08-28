@@ -50,6 +50,9 @@
               <span class="sr-only">Next</span>
             </a>
           </div>
+					<% @all.each do |item| %>
+						<%= image_tag("/#{item.image_url}") %>
+					<% end %>
 
           <div class="row">
 
