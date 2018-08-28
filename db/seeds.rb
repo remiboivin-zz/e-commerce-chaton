@@ -30,8 +30,9 @@ nb_de_card.times do |i|
 		user_id: rand(1..nb_de_user)
 	)
   if mon_card.save
-    puts "Création du Card N°#{i}."
+    puts "\nCréation du Card N°#{i}."
+  else
+    puts "\t----- Attention ! Un PANIER (Card) existe déjà pour cet User.\n\tUn User ne peut posséder qu'un seul Card [...]\n\tCela signifie que si l'User possède déjà un panier, le panier que vous avez voulu créer ne sera pas créer (car un Card existe déjà pour cet User) -----"
   end
 end
-puts "\t----- Attention ! Un User ne peut posséder qu'un seul Card [...]\n\tCela signifie que si l'User possède déjà un panier, le panier que vous avez voulu créer ne sera pas créer (car un Card existe déjà pour cet User) -----"
 puts

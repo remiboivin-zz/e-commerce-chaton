@@ -1,5 +1,11 @@
 # README
 
+## Base de Donnée, model utilisé
+Intransitive Associations
+> https://www.sitepoint.com/master-many-to-many-associations-with-activerecord/
+
+
+
 This README would normally document whatever steps are necessary to get the
 application up and running.
 
