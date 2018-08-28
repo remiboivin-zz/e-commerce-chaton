@@ -1,0 +1,34 @@
+.btn-suppr {
+	background-color: #BDBDBD;
+	color: #F2F2F2;
+	padding: 5px 5px;
+	border-radius: 4px;
+	font-size: 14px;
+}
+
+.btn-suppr:hover {
+	background-color: #FF5252;
+	text-decoration: none;
+	color: #FFE6E6;
+}
+
+.info-cart {
+	margin-left: 10%;
+}
+
+.info-cart span {
+	font-weight: bold;
+}
+
+ul {
+	list-style-type: none;
+	position: relative;
+}
+
+.wrapper {
+	margin-top: 5%;
+}
+
+.container {
+	position: relative;
+}
