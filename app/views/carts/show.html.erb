@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>CART - PANIER</title>
+</head>
+<body>
+	<div>
+		lorem
+	</div>
+
+	<div class="jumbotron">
+		<h2>
+			Bonjour <%= @name_user %>,
+		</h2>
+		<br>Vous êtes l'ID N°<%= @id_user %>
+	</div>
+
+
+	<%= @cart %>
+	<br>
+	Ton cart possède l'id <%= @cart_id %>
+	<h2>VOS ITEMS :</h2>
+
+	<% @cart.each do |store| %>
+		<ul>
+			<li> 
+				<%= Item.find(store.item_id).title %> -> <%= Item.find(store.item_id).price %> 
+				<a class="btn-danger" href="/carts/edit/<%= store.item_id%>">DELETE</a>
+			</li>
+		</ul>
+	<% end %>
+
+</body>
+</html>

@@ -3,11 +3,6 @@
 
 <html>
   <head>
-    <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
-
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
@@ -21,48 +16,17 @@
 
     <!-- Custom styles for this template -->
     <link href="css/shop-homepage.css" rel="stylesheet">
+
+    <title>ChatonPix</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
-      <nav class="navbar navbar-expand-lg navbar-dark bg-white fixed-top">
-      <div class="container">
-        <img class="logo" src="cat-logo.jpg">
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarResponsive">
-          <ul class="navbar-nav ml-auto">
-            <!-- Affichage des liens divers -->
-            <li class="nav-item active">
-              <a class="link-navbar" href="#">Accueil
-                <span class="sr-only">(current)</span>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="link-navbar" href="#">A propos</a>
-            </li>
-            <!-- Affichage des boutons Log in/Log out etc... -->
-            <% if user_signed_in? %> <!-- Connecté -->
-              <li class="nav-item">
-              <a class="btn btn-warning nav-link" href=<%= edit_user_registration_path %> >Edit</a>
-              <%= link_to "Se déconnecter", destroy_user_session_path , method: :delete, class: "btn btn-danger nav-link" %>
-              </li>
-              <li class="nav-item">
-                <img class="basket-icon" src="basket-icon.png" href="#">
-              </li>
-             <% else %> <!-- Pas connecté --> 
-              <li class="nav-item">
-                <a class="btn btn-info nav-link" href=<%= new_user_session_path %> >Se connecter</a>
-              </li>
-              <li class="nav-item">
-                <a class="btn btn-success nav-link" href=<%= new_user_registration_path %> >S'inscrire</a>
-              </li>
-            <% end %>
-          </ul>
-        </div>
-      </div>
-    </nav>
-
+    <%= render 'layouts/header' %>
     <%= yield %>
   </body>
 </html>
