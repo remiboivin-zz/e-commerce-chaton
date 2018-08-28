@@ -1,7 +1,7 @@
-nb_de_user = 10
-nb_d_item = 20
+nb_de_user = 3
+nb_d_item = 4
 nb_de_cart = 5
-num_cart_a_remplir = 11
+num_cart_a_remplir = 3
 
 
 require 'faker'

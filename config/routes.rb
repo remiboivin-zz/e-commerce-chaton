@@ -1,7 +1,6 @@
 Rails.application.routes.draw do
   root 'static_pages#home'
   
-  get '/carts/index', to: 'carts#index'
   get '/carts/new', to: 'carts#new'
   
   get '/carts/show', to: 'carts#show'

@@ -15,7 +15,6 @@
 		<br>Vous êtes l'ID N°<%= @id_user %>
 	</div>
 
-
 	<%= @cart %>
 	<br>
 	Ton cart possède l'id <%= @cart_id %>
@@ -30,5 +29,38 @@
 		</ul>
 	<% end %>
 
+	<div class="wrapper">
+		<div class="info-cart">
+			<span>Email :</span> <%= @name_user %><br>
+			<span>ID:</span> <%= @id_user %><br>
+			<span>Numéro du panier : <%= @cart_id %></span> 
+		</div>
+	<br>
+	
+	<div class="container">
+		<table class="table">
+			<thead>
+				<tr>
+				<th scope="col">#</th>
+				<th scope="col">Article</th>
+				<th scope="col">Prix</th>
+				<th scope="col"> </th>
+				</tr>
+			</thead>
+			<tbody>
+				<% @cart.each_with_index do |item, i| %>
+				<tr>
+				<th scope="row"><%= i+1 %></th>
+				<td><%= item.title %></td>
+				<td><%= item.price %> </td>
+				<td><a class="btn-suppr" href="" %>Supprimer</a></td>
+				</tr>
+				<% end %>
+			</tbody>
+		</table>
+	</div>
+
+
 </body>
 </html>
+
