@@ -1,9 +1,11 @@
 Rails.application.routes.draw do
-  get 'carts/index'
-  get 'carts/edit'
-  get 'carts/new'
-  get 'carts/show'
   root 'static_pages#home'
+  
+  get '/carts/index', to: 'carts#index'
+  get '/carts/edit', to: 'carts#edit'
+  get '/carts/new', to: 'carts#new'
+  
+  get '/carts/show', to: 'carts#show'
 
   devise_for :users
 end

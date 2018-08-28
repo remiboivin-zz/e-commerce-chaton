@@ -1,2 +1,28 @@
-<h1>Carts#index</h1>
-<p>Find me in app/views/carts/index.html.erb</p>
+<!DOCTYPE html>
+<html>
+<head>
+	<title>CART - PANIER</title>
+</head>
+<body>
+	<div>
+		lorem
+	</div>
+
+	<div class="jumbotron">
+		<h2>
+			Bonjour <%= @name_user %>,
+		</h2>
+		<br>Vous êtes l'ID N°<%= @id_user %>
+	</div>
+
+
+	Ton cart possède l'id <%= @cart.id %>
+	<h2>VOS ITEMS :</h2>
+	<% @cart.items.each do |item| %>
+		<ul>
+			<li> <%= item.title %> -> <%= item.price %> </li>
+		</ul>
+	<% end %>
+
+</body>
+</html>
