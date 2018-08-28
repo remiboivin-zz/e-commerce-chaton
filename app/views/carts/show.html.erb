@@ -16,11 +16,17 @@
 	</div>
 
 
-	Ton cart possède l'id <%= @cart.id %>
+	<%= @cart %>
+	<br>
+	Ton cart possède l'id <%= @cart_id %>
 	<h2>VOS ITEMS :</h2>
-	<% @cart.items.each do |item| %>
+
+	<% @cart.each do |store| %>
 		<ul>
-			<li> <%= item.title %> -> <%= item.price %> </li>
+			<li> 
+				<%= Item.find(store.item_id).title %> -> <%= Item.find(store.item_id).price %> 
+				<a class="btn-danger" href="/carts/edit/<%= store.item_id%>">DELETE</a>
+			</li>
 		</ul>
 	<% end %>
 

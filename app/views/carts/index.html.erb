@@ -20,7 +20,10 @@
 	<h2>VOS ITEMS :</h2>
 	<% @cart.items.each do |item| %>
 		<ul>
-			<li> <%= item.title %> -> <%= item.price %> </li>
+			<li> 
+				<%= item.title %> -> <%= item.price %> 
+				<a class="btn-danger" href="/carts/edit">DELETE</a>
+			</li>
 		</ul>
 	<% end %>
 

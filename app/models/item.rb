@@ -5,4 +5,8 @@ class Item < ApplicationRecord
   validates :image_url, uniqueness: true
 
 	has_and_belongs_to_many :carts
+
+
+	has_many :stores
+	has_many :carts, through: :stores
 end
