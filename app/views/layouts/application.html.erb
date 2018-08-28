@@ -44,24 +44,25 @@
             <!-- Affichage des boutons Log in/Log out etc... -->
             <% if user_signed_in? %> <!-- Connecté -->
               <li class="nav-item">
-              <a class="btn btn-warning" href=<%= edit_user_registration_path %> >Edit </a>
-              <%= link_to "Se déconnecter", destroy_user_session_path , method: :delete, class: "btn btn-danger" %>
+              <a class="btn btn-warning nav-link" href=<%= edit_user_registration_path %> >Edit </a>
+              <%= link_to "Se déconnecter", destroy_user_session_path , method: :delete, class: "btn btn-danger nav-link" %>
               </li>
               <li class="nav-item">
                 <img class="basket-icon" src="basket-icon.png" href="#">
               </li>
              <% else %> <!-- Pas connecté --> 
               <li class="nav-item">
-                <a class="btn btn-info" href=<%= new_user_session_path %> >Se connecter</a>
+                <a class="btn btn-info nav-link" href=<%= new_user_session_path %> >Se connecter</a>
               </li>
               <li class="nav-item">
-                <a class="btn btn-success" href=<%= new_user_registration_path %> >S'inscrire</a>
+                <a class="btn btn-success nav-link" href=<%= new_user_registration_path %> >S'inscrire</a>
               </li>
             <% end %>
           </ul>
         </div>
       </div>
     </nav>
+
     <%= yield %>
   </body>
 </html>
