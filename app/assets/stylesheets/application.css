@@ -24,7 +24,6 @@ img.logo {
 }
 
 .link-navbar {
-	position: relative;
 	margin-left: 10px;
 }
 
@@ -45,4 +44,9 @@ img.basket-icon {
 .btn {
 	margin-top: 5%;
 	margin-left: 2px;
+	height: 45px;
+}
+
+.nav-item {
+	display: flex;
 }

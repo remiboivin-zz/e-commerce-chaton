@@ -9,11 +9,7 @@ nb_d_item.times do |i|
   Item.create(
     title: Faker::Cat.name,
     description: Faker::Movie.quote,
-<<<<<<< HEAD
     price: Faker::Number.decimal(2),
-=======
-    price: Faker::Stripe.ccv,
->>>>>>> 88ccd0b24d049d526324a81eab82993e4e552e58
     image_url: "chaton#{i}.jpg"
   )
   puts "Création de l'Item N°#{i}."
