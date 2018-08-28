@@ -10,12 +10,13 @@ class CartsController < ApplicationController
         i.destroy
       end
     end
-
     # redirect_to "/carts/show"
   end
 
+
   def new
   end
+
 
   def show
     @id_user = current_user.id
@@ -25,8 +26,7 @@ class CartsController < ApplicationController
   	@name_user = current_user.email
     num_cart = Cart.find_by(user_id: @id_user)
   	@cart = Store.where(cart_id: num_cart.id)
-
   end
+
+
 end
-
-
