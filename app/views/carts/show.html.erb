@@ -40,7 +40,7 @@
 
 	<h2><b>Total :</b> <%= @prix_total_panier %> €</h2>
 
-	<a class="btn btn-success" href="#">Passer commande</a>
+	<a class="btn btn-success" href="/carts/pay/<%= @prix_total_panier.to_i%>,<%= @prix_total_panier.to_s.split(".")[1]%>">Passer commande</a>
 
 </body>
 </html>

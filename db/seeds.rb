@@ -10,7 +10,7 @@ nb_d_item.times do |i|
   Item.create(
     title: Faker::Dog.breed,
     description: Faker::Movie.quote,
-    price: Faker::Number.decimal(2),
+    price: "#{rand(1..400)},#{rand(0..99)}",
     image_url: "chaton#{i}.jpg"
   )
   puts "Création de l'Item N°#{i}."
