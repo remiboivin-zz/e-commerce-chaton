@@ -14,6 +14,8 @@
  *= require_self
  */
 @import url("show.css")
+@import url("edit.css")
+@import url("header.css")
 
 img{
 	border: 2px solid red;
@@ -55,3 +57,4 @@ img.basket-icon {
 .nav-item {
 	display: flex;
 }
+

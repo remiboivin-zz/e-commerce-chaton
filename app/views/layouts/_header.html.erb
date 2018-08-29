@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-white fixed-top">
   <div class="container">
-    <img class="logo" src="/cat-logo.jpg">
+    <a href=<%= root_path %> ><img class="logo" src="/cat-logo.jpg"></a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -8,7 +8,7 @@
     <ul class="navbar-nav ml-auto">
   <!-- Affichage des liens divers -->
       <li class="nav-item active">
-        <a class="link-navbar" href="#">Accueil
+        <a class="link-navbar" href=<%= root_path %> >Accueil
         <span class="sr-only">(current)</span>
         </a>
       </li>
@@ -22,7 +22,7 @@
         <%= link_to "Se déconnecter", destroy_user_session_path , method: :delete, class: "btn btn-danger nav-link" %>
       </li>
       <li class="nav-item">
-        <img class="basket-icon" src="/basket-icon.png" href="#">
+        <a href="#"><img class="basket-icon" src="/basket-icon.png"></a>
       </li>
     <% else %> <!-- Pas connecté --> 
       <li class="nav-item">
@@ -33,7 +33,6 @@
       </li>
   <% end %>
     </ul>
-  </div> <!-- fin collapse -->
-  
+  </div> <!-- fin collapse --> 
   </div> <!-- fin container -->
 </nav>

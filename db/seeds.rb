@@ -1,5 +1,5 @@
 nb_de_user = 3
-nb_d_item = 4
+nb_d_item = 20
 nb_de_cart = 5
 num_cart_a_remplir = 4
 
@@ -8,7 +8,7 @@ require 'faker'
 
 nb_d_item.times do |i|
   Item.create(
-    title: Faker::Cat.name,
+    title: Faker::Dog.breed,
     description: Faker::Movie.quote,
     price: Faker::Number.decimal(2),
     image_url: "chaton#{i}.jpg"
@@ -43,9 +43,9 @@ end
 puts
 
 
-# # ---------------------------------------------------
-# # => ----        REMPLISSAGE DU CART CHOISI
-# # ---------------------------------------------------
+# # # ---------------------------------------------------
+# # # => ----        REMPLISSAGE DU CART CHOISI
+# # # ---------------------------------------------------
 
 puts
 puts "---- REMPLISSAGE DU CART #{num_cart_a_remplir} ----"

@@ -1,23 +1,17 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title>CART - PANIER</title>
-</head>
-<body>
-	
+<div class="wrapper">
 	<% if !user_signed_in? %>
 		<br>
-		<div class="alert alert-danger" role="alert">
-			Connecter vous pour voir le panier!
+		<div class="alert alert-danger" role="alert" style="text-align: center;">
+			Connecte-toi pour voir le panier !
 		</div>
 	<% else %>
-		<div class="wrapper">
+		<div class="container">
+			<h3>Ton panier :</h3>
 			<div class="info-cart">
 				<span>Email :</span> <%= @name_user %><br>
 				<span>ID:</span> <%= @id_user %><br>
 				<span>Numéro du panier : <%= @cart_id %></span> 
 			</div>
-		<br>
 		
 		<div class="container">
 			<table class="table">
@@ -46,4 +40,3 @@
 
 </body>
 </html>
-
