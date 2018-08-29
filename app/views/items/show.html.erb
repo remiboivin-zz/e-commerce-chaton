@@ -3,7 +3,13 @@
 <h1>SHOW DETAIL about one Item</h1>
 <h2> <%= @id_item_detail %> </h2>
 
+
 <div class="jumbotron">
 	<%= @item.title %> -> <%= @item.price %> <br>
-	<a class="btn btn-success" href="/item/add/<%= @id_item_detail %>">ADD</a>
+	
+	<% if user_signed_in? %>
+		<a class="btn btn-success" href="/item/add/<%= @id_item_detail %>">ADD</a>
+	<% else %>
+		<a class="btn btn-success" href="<%= new_user_registration_path %>">ADD</a>
+	<% end %>
 </div>
