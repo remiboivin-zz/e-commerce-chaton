@@ -9,4 +9,6 @@ Rails.application.routes.draw do
 
 
   get 'items/show'
+
+  devise_for :users
 end
