@@ -1,0 +1,19 @@
+<% if user_signed_in? %>
+	<br>
+
+	<center>
+		<h1>TU ES SUR TON PROFIL</h1>
+	</center>
+
+	<h2> <strong> Email: </strong> <%= User.find(current_user.id).email %></h2>
+
+	<h2> <strong> Changer info: </strong> 
+		<a class="" href=<%= edit_user_registration_path %> >Edit</a> 
+	</h2>
+
+<% else %>
+	<div class="alert alert-danger" role="alert" style="text-align: center;">
+		<br>
+		Connecte-toi pour voir ton profil !
+		<br>
+<% end %>
