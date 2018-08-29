@@ -46895,6 +46895,7 @@ puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
 puma (3.12.0) lib/puma/server.rb:472:in `process_client'
 puma (3.12.0) lib/puma/server.rb:332:in `block in run'
 puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+<<<<<<< HEAD
 Started GET "/carts/show" for 127.0.0.1 at 2018-08-29 09:00:11 +0200
   [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
   ↳ /home/nancy/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
@@ -48403,10 +48404,16 @@ Completed 302 Found in 317ms (ActiveRecord: 10.1ms)
 
 
 Started GET "/" for 127.0.0.1 at 2018-08-29 09:10:37 +0200
+=======
+Started GET "/" for 127.0.0.1 at 2018-08-29 08:56:26 +0200
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/nancy/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+>>>>>>> BD_User_Item_Card-GWEN
 Processing by StaticPagesController#home as HTML
   Rendering static_pages/home.html.erb within layouts/application
   [1m[36mItem Load (0.7ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
   ↳ app/views/static_pages/home.html.erb:22
+<<<<<<< HEAD
   Rendered static_pages/home.html.erb within layouts/application (49.5ms)
   [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
   ↳ app/views/layouts/_header.html.erb:19
@@ -48416,6 +48423,16 @@ Completed 200 OK in 162ms (Views: 135.7ms | ActiveRecord: 3.6ms)
 
 Started GET "/vendor/bootstrap/css/bootstrap.min.css" for 127.0.0.1 at 2018-08-29 09:10:37 +0200
 Started GET "/css/shop-homepage.css" for 127.0.0.1 at 2018-08-29 09:10:37 +0200
+=======
+  Rendered static_pages/home.html.erb within layouts/application (39.2ms)
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/layouts/_header.html.erb:19
+  Rendered layouts/_header.html.erb (50.2ms)
+Completed 200 OK in 1057ms (Views: 1001.0ms | ActiveRecord: 6.7ms)
+
+
+Started GET "/vendor/bootstrap/css/bootstrap.min.css" for 127.0.0.1 at 2018-08-29 08:56:28 +0200
+>>>>>>> BD_User_Item_Card-GWEN
   
 ActionController::RoutingError (No route matches [GET] "/vendor/bootstrap/css/bootstrap.min.css"):
   
@@ -48446,6 +48463,11 @@ puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
 puma (3.12.0) lib/puma/server.rb:472:in `process_client'
 puma (3.12.0) lib/puma/server.rb:332:in `block in run'
 puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+<<<<<<< HEAD
+=======
+Started GET "/css/shop-homepage.css" for 127.0.0.1 at 2018-08-29 08:56:28 +0200
+Started GET "/vendor/jquery/jquery.min.js" for 127.0.0.1 at 2018-08-29 08:56:28 +0200
+>>>>>>> BD_User_Item_Card-GWEN
   
 ActionController::RoutingError (No route matches [GET] "/css/shop-homepage.css"):
   
@@ -48476,6 +48498,7 @@ puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
 puma (3.12.0) lib/puma/server.rb:472:in `process_client'
 puma (3.12.0) lib/puma/server.rb:332:in `block in run'
 puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+<<<<<<< HEAD
 Started GET "/vendor/jquery/jquery.min.js" for 127.0.0.1 at 2018-08-29 09:10:37 +0200
 Started GET "/vendor/bootstrap/js/bootstrap.bundle.min.js" for 127.0.0.1 at 2018-08-29 09:10:37 +0200
   
@@ -48599,6 +48622,12 @@ puma (3.12.0) lib/puma/server.rb:472:in `process_client'
 puma (3.12.0) lib/puma/server.rb:332:in `block in run'
 puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
   
+=======
+  
+ActionController::RoutingError (No route matches [GET] "/vendor/jquery/jquery.min.js"):
+  
+Started GET "/vendor/bootstrap/js/bootstrap.bundle.min.js" for 127.0.0.1 at 2018-08-29 08:56:28 +0200
+>>>>>>> BD_User_Item_Card-GWEN
 actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
 web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
 web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
@@ -48626,10 +48655,15 @@ puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
 puma (3.12.0) lib/puma/server.rb:472:in `process_client'
 puma (3.12.0) lib/puma/server.rb:332:in `block in run'
 puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+<<<<<<< HEAD
 Started GET "/carts/basket-icon.png" for 127.0.0.1 at 2018-08-29 09:10:44 +0200
   
 Started GET "/carts/cat-logo.jpg" for 127.0.0.1 at 2018-08-29 09:10:44 +0200
 ActionController::RoutingError (No route matches [GET] "/carts/basket-icon.png"):
+=======
+  
+ActionController::RoutingError (No route matches [GET] "/vendor/bootstrap/js/bootstrap.bundle.min.js"):
+>>>>>>> BD_User_Item_Card-GWEN
   
 actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
 web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
@@ -48658,8 +48692,14 @@ puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
 puma (3.12.0) lib/puma/server.rb:472:in `process_client'
 puma (3.12.0) lib/puma/server.rb:332:in `block in run'
 puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+<<<<<<< HEAD
   
 ActionController::RoutingError (No route matches [GET] "/carts/cat-logo.jpg"):
+=======
+Started GET "/vendor/bootstrap/js/bootstrap.bundle.min.js" for 127.0.0.1 at 2018-08-29 08:56:31 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/vendor/bootstrap/js/bootstrap.bundle.min.js"):
+>>>>>>> BD_User_Item_Card-GWEN
   
 actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
 web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
