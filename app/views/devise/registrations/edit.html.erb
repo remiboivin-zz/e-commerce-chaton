@@ -1,6 +1,6 @@
 <div class="wrapper">
     <center>
-    <h2>Edit <%= resource_name.to_s.humanize %></h2>
+    <h2>Ici tu peux modifier ton profil, <%= resource_name.to_s.humanize %> !</h2>
     </center>
 
     <div class="container">
@@ -18,7 +18,7 @@
 
           <div class="form-row">
             <div class="form-group col-md-6">
-              <%= f.label :password %> <i>(leave blank if you don't want to change it)</i><br />
+              <%= f.label :password %> <i>(à laisser vide si tu ne veux pas le modifier)</i><br />
               <%= f.password_field :password, :class => "form-control" %>
                 <% if @minimum_password_length %>
                   <em><%= @minimum_password_length %> characters minimum</em>
@@ -31,7 +31,7 @@
             </div>
 
             <div class="field form-group">
-              <%= f.label :current_password %> <i>(we need your current password to confirm your changes)</i><br />
+              <%= f.label :current_password %> <i>(obligatoire pour confirmer les changements)</i><br />
               <%= f.password_field :current_password, :class => "form-control" %>
             </div>
           </div> <!-- fin form-row -->
