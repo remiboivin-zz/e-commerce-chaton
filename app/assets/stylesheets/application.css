@@ -15,6 +15,10 @@
  */
 @import url("show.css")
 
+img{
+	border: 2px solid red;
+}
+
 img.logo {
 	height: 50px;
 	width: auto;

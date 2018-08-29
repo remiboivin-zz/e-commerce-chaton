@@ -1,7 +1,7 @@
 nb_de_user = 3
 nb_d_item = 4
 nb_de_cart = 5
-num_cart_a_remplir = 3
+num_cart_a_remplir = 4
 
 
 require 'faker'
@@ -49,7 +49,7 @@ puts
 
 puts
 puts "---- REMPLISSAGE DU CART #{num_cart_a_remplir} ----"
-2.times do
+6.times do
   x = rand(1..Item.last.id)
   begin
     Store.create(item_id: x, cart_id: num_cart_a_remplir)

@@ -8,7 +8,7 @@ Rails.application.routes.draw do
   get '/carts/edit/:id_item_to_del', to: 'carts#edit'
 
 
-  get 'items/show'
+  get 'items/show/:id_item', to: 'items#show'
 
   devise_for :users
 end

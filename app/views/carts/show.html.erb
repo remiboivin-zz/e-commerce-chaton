@@ -35,7 +35,7 @@
 					<th scope="row"><%= i+1 %></th>
 					<td><%= Item.find(item.item_id).title %></td>
 					<td><%= Item.find(item.item_id).price %> </td>
-					<td><a class="btn-suppr" href="/carts/edit/<%= item.item_id%>" >Supprimer</a></td>
+					<td><a class="btn-suppr" href="/carts/edit/<%= i+1 %>" >Supprimer</a></td>
 					</tr>
 					<% end %>
 				</tbody>

@@ -5,12 +5,17 @@ class CartsController < ApplicationController
   def edit
     @id_item_to_del = params[:id_item_to_del]
 
-    # Store.where(cart_id: current_user.id).each do |i|
-    #   if i.item_id == @id_item_to_del
-    #     i.destroy
-    #   end
-    # end
-    # redirect_to "/carts/show"
+    @num_cart_user = Cart.find_by(user_id: current_user.id).id
+    @tab = Store.where(cart_id: @num_cart_user)
+
+
+    @tab.each_with_index do |i, nb|
+      if "#{nb+1}" == @id_item_to_del
+        i.destroy
+      end
+    end
+
+    redirect_to "/carts/show"
   end
 
 

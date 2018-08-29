@@ -1,4 +1,28 @@
 <br><br>
+
 <h1>
-	<%= @id_item_to_del %>
+	Supprimer l'article N°<%= @id_item_to_del %> du panier
 </h1>
+
+	<br><br>
+	User : <%= User.find(current_user.id).email %>
+
+	<br><br>
+
+	<% @tab.each_with_index do |i, nb| %>
+		<ul>
+			tour n°<%= nb+1 %><br>
+			item to del is n°<%= @id_item_to_del %>
+			
+			<% if "#{nb+1}" == @id_item_to_del %>
+				<h3> A supprimer dans le panier : </h3>
+				<li>
+					<%= nb+1 %>) <%= Item.find(i.item_id).title %>
+					<%= i.destroy %>
+				</li>
+			<% end %>
+		</ul>
+	<% end %>
+
+	<br><br>
+	
