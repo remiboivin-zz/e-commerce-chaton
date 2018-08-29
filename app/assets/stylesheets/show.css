@@ -14,6 +14,7 @@
 
 .info-cart {
 	margin-left: 10%;
+	margin-bottom: 10px;
 }
 
 .info-cart span {
@@ -31,4 +32,11 @@ ul {
 
 .container {
 	position: relative;
+}
+
+h2 {
+	font-size: 18px;
+	background-color: #EDEDED;
+	color: #5E5E5E;
+	padding: 8px 7px;
 }
