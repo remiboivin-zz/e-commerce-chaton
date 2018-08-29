@@ -12,7 +12,6 @@
 
           <div class="row">
 
-            <!-- A modifier avec une boucle pour chaque image -->
             <% @all.each_with_index do |item, i| %>   
             
             <div class="col-lg-4 col-md-6 mb-4">
@@ -28,19 +27,19 @@
                 <div class="card-footer">
                   <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
                 </div>
+                <% if user_signed_in? %>
+                  <a class="btn btn-success" href="/item/add/<%= i+1 %>">ADD</a>
+                <% else %>
+                  <a class="btn btn-success" href="<%= new_user_registration_path %>">ADD</a>
+                <% end %>
               </div>
             </div>
 
            <% end %>
 
           </div>
-          <!-- /.row -->
-
       </div>
-      <!-- /.row -->
-
     </div>
-    <!-- /.container -->
 
     <!-- Footer -->
     <footer class="py-5 bg-dark">

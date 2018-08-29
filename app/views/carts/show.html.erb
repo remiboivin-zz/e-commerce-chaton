@@ -1,38 +1,46 @@
 <div class="wrapper">
-<% if !user_signed_in? %>
-	<br>
-	<div class="alert alert-danger" role="alert" style="text-align: center;">
-		Connecte-toi pour voir le panier !
-	</div>
-<% else %>
-	<div class="container">
-		<h3>Ton panier :</h3>
-		<div class="info-cart">
-			<span>Email :</span> <%= @name_user %><br>
-			<span>ID:</span> <%= @id_user %><br>
-			<span>Numéro du panier : <%= @cart_id %></span> 
+	<% if !user_signed_in? %>
+		<br>
+		<div class="alert alert-danger" role="alert" style="text-align: center;">
+			Connecte-toi pour voir le panier !
 		</div>
-	<br>
-		<table class="table">
-			<thead>
-				<tr>
-				<th scope="col">#</th>
-				<th scope="col">Article</th>
-				<th scope="col">Prix</th>
-				<th scope="col"> </th>
-				</tr>
-			</thead>
-			<tbody>
-				<% @cart.each_with_index do |item, i| %>
-				<tr>
-				<th scope="row"><%= i+1 %></th>
-				<td><%= Item.find(item.item_id).title %></td>
-				<td><%= Item.find(item.item_id).price %> </td>
-				<td><a class="btn-suppr" href="/carts/edit/<%= item.item_id%>" %>Supprimer</a></td>
-				</tr>
-				<% end %>
-			</tbody>
-		</table>
-	</div> <!-- fin container -->
-<% end %>
-</div> <!-- fin wrapper -->
+	<% else %>
+		<div class="container">
+			<h3>Ton panier :</h3>
+			<div class="info-cart">
+				<span>Email :</span> <%= @name_user %><br>
+				<span>ID:</span> <%= @id_user %><br>
+				<span>Numéro du panier : <%= @cart_id %></span> 
+			</div>
+		
+		<div class="container">
+			<table class="table">
+				<thead>
+					<tr>
+					<th scope="col">#</th>
+					<th scope="col">Article</th>
+					<th scope="col">Prix</th>
+					<th scope="col"> </th>
+					</tr>
+				</thead>
+				<tbody>
+					<% @cart.each_with_index do |item, i| %>
+					<tr>
+					<th scope="row"><%= i+1 %></th>
+					<td><%= Item.find(item.item_id).title %></td>
+					<td><%= Item.find(item.item_id).price %> </td>
+					<td><a class="btn-suppr" href="/carts/edit/<%= i+1 %>" >Supprimer</a></td>
+					</tr>
+					<% end %>
+				</tbody>
+			</table>
+		</div>
+
+	<% end %>
+
+	<h2>PRIX TOTAL : <%= @prix_total_panier %> </h2>
+
+	<a class="btn btn-success" href="#">Passer commande</a>
+
+</body>
+</html>

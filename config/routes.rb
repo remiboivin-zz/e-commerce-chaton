@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
 
   root 'static_pages#home'
+  get '/profil', to: 'static_pages#profil'
   
   get '/carts/new', to: 'carts#new'
   
@@ -8,7 +9,7 @@ Rails.application.routes.draw do
   get '/carts/show/', to: 'carts#show'
 
   get '/item/:id_item_detail', to: 'items#show'
-  get 'item/add/:id_item_to_add', to: 'items#add'
+  get '/item/add/:id_item_to_add', to: 'items#add'
 
   devise_for :users
 end

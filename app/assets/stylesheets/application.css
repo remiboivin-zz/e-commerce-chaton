@@ -14,6 +14,48 @@
  *= require_self
  */
 @import url("show.css")
-@import url("header.css")
 @import url("edit.css")
+@import url("header.css")
 @import url("itemdetails.css")
+
+
+img{
+	border: 2px solid red;
+}
+
+img.logo {
+	height: 50px;
+	width: auto;
+}
+
+.navbar {
+	box-shadow: 0px 1px 4px rgba(0,0,0,0.3);
+}
+
+.link-navbar {
+	margin-left: 10px;
+}
+
+a.link-navbar {
+	color: black;
+}
+
+a.link-navbar:hover {
+	text-decoration: none;
+	font-weight: bold;
+	color: black;
+}
+
+img.basket-icon {
+	height: 60px;
+}
+
+.btn {
+	margin-top: 5%;
+	margin-left: 2px;
+	height: 45px;
+}
+
+.nav-item {
+	display: flex;
+}
