@@ -28,6 +28,11 @@
                 <div class="card-footer">
                   <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
                 </div>
+                <% if user_signed_in? %>
+                  <a class="btn btn-success" href="/item/add/<%= i+1 %>">ADD</a>
+                <% else %>
+                  <a class="btn btn-success" href="<%= new_user_registration_path %>">ADD</a>
+                <% end %>
               </div>
             </div>
 
