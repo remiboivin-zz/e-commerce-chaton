@@ -8,7 +8,6 @@ class CartsController < ApplicationController
     @num_cart_user = Cart.find_by(user_id: current_user.id).id
     @tab = Store.where(cart_id: @num_cart_user)
 
-
     @tab.each_with_index do |i, nb|
       if "#{nb+1}" == @id_item_to_del
         i.destroy

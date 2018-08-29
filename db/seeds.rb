@@ -1,46 +1,46 @@
 nb_de_user = 3
 nb_d_item = 20
 nb_de_cart = 5
-num_cart_a_remplir = 5
+num_cart_a_remplir = 3
 
 
 require 'faker'
 
-# nb_d_item.times do |i|
-#   Item.create(
-#     title: Faker::Dog.breed,
-#     description: Faker::Movie.quote,
-#     price: Faker::Number.decimal(2),
-#     image_url: "chaton#{i}.jpg"
-#   )
-#   puts "Création de l'Item N°#{i}."
-# end
-# puts
+nb_d_item.times do |i|
+  Item.create(
+    title: Faker::Dog.breed,
+    description: Faker::Movie.quote,
+    price: Faker::Number.decimal(2),
+    image_url: "chaton#{i}.jpg"
+  )
+  puts "Création de l'Item N°#{i}."
+end
+puts
 
 
-# nb_de_user.times do |i|
-#   User.create(
-#     email: Faker::Internet.email,
-#     password: 'test_that'
-#   )
-#   puts "Création de l'User N°#{i}."
-# end
-# puts
+nb_de_user.times do |i|
+  User.create(
+    email: Faker::Internet.email,
+    password: 'test_that'
+  )
+  puts "Création de l'User N°#{i}."
+end
+puts
 
 
-# nb_de_cart.times do |i|
+nb_de_cart.times do |i|
 
-#   mon_cart = Cart.new(
-#     user_id: rand(1..nb_de_user)
-#   )
-#   if mon_cart.save
-#     puts "\nCréation du Cart N°#{i}.____"
-#   else
-#     puts "\t----- Attention ! Un PANIER (Cart) existe déjà pour cet User. -----\n"
-#     # puts"\tUn User ne peut posséder qu'un seul Cart [...]\n\tCela signifie que si l'User possède déjà un panier, le panier que vous avez voulu créer ne sera pas créer (car un Cart existe déjà pour cet User) -----"
-#   end
-# end
-# puts
+  mon_cart = Cart.new(
+    user_id: rand(1..nb_de_user)
+  )
+  if mon_cart.save
+    puts "\nCréation du Cart N°#{i}.____"
+  else
+    puts "\t----- Attention ! Un PANIER (Cart) existe déjà pour cet User. -----\n"
+    # puts"\tUn User ne peut posséder qu'un seul Cart [...]\n\tCela signifie que si l'User possède déjà un panier, le panier que vous avez voulu créer ne sera pas créer (car un Cart existe déjà pour cet User) -----"
+  end
+end
+puts
 
 
 # # # ---------------------------------------------------

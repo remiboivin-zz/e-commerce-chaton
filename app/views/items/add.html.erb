@@ -1,0 +1,12 @@
+<br>
+
+<% if user_signed_in? %>
+	<h1> User id : <%= current_user.id %> -> <%= current_user.email %> </h1>
+<% end %>
+<h2> Information about Item N°<%= @id_item %> </h2>
+
+<strong>Title : </strong> <%= @item.title %>
+<br>
+<strong>Prix : </strong> <%= @item.price %>
+
+
