@@ -1,17 +1,23 @@
-<h1>Hello</h1>
+<div class="wrapper">
+	<h1><%= @id_item_detail.title %></h1>
+		<div class="container">
+			<div class="item-image">
+				<%= image_tag("/#{@id_item_detail.image_url}", size: "600x400") %>
+				<span class="desc-text"><b>Description :</b> <%= @id_item_detail.description %></span> 
+			</div>
 
-<!-- <% content_for :head do %>
-<div class="container">
-
-  <div class="row">
-
-    <div class="col-lg-3">
-
-      <h1 class="my-4">ChatonPix</h1>
-
-      <footer class="py-5 bg-dark">
-        <div class="container">
-          <p class="m-0 text-center text-white">Copyright &copy; Your Website 2017</p>
-        </div>
-        <!-- /.container -->
-      </footer> -->
+			<div class="columns">
+				<ul class="price">
+				<li class="header">Notre offre</li>
+				<li class="grey"><%= @id_item_detail.price %> €</li>
+				<li>Papier glacé</li>
+				<li>Format HD</li>
+				<% if user_signed_in? %>
+					<li class="button"><a href="/item/add/<%= @id_to_send %>" class="button">AJOUTER AU PANIER</a></li>
+				<% else %>
+					<li class="button"><a href="<%= new_user_registration_path %>" class="button">S'INSCRIRE</a></li>
+				<% end %>
+				</ul>
+			</div>
+		</div>
+</div>
