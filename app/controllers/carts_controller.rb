@@ -30,6 +30,12 @@ class CartsController < ApplicationController
     	@name_user = current_user.email
       num_cart = Cart.find_by(user_id: @id_user)
       @cart = Store.where(cart_id: num_cart.id)
+
+      @prix_total_panier = 0
+      @cart.each do |i|
+        @prix_total_panier += Item.find(i.item_id).price
+      end
+
     end
   end
 
