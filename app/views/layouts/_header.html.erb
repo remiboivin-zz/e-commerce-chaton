@@ -12,11 +12,11 @@
         <span class="sr-only">(current)</span>
         </a>
       </li>
+  <!-- Affichage des boutons Log in/Log out etc... -->
+    <% if user_signed_in? %> <!-- Connecté -->
       <li class="nav-item">
         <a class="link-navbar btn btn-primary" href="/profil">Mon Profil</a>
       </li>
-  <!-- Affichage des boutons Log in/Log out etc... -->
-    <% if user_signed_in? %> <!-- Connecté -->
       <li class="nav-item">
         <a class="btn btn-warning nav-link" href=<%= edit_user_registration_path %> >Edit</a>
         <%= link_to "Se déconnecter", destroy_user_session_path , method: :delete, class: "btn btn-danger nav-link" %>
