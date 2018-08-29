@@ -13,14 +13,14 @@
           <div class="row">
 
             <!-- A modifier avec une boucle pour chaque image -->
-            <% @all.each do |item| %>   
+            <% @all.each_with_index do |item, i| %>
             
             <div class="col-lg-4 col-md-6 mb-4">
               <div class="card h-100">
                 <%= image_tag("/#{item.image_url}", size: "358x205") %>
                 <div class="card-body">
                   <h4 class="card-title">
-                    <%= link_to("#{item.title}", '#') %>
+                    <%= link_to("#{item.title}", "/item/#{i+1}") %>
                   </h4>
                   <h5><%= "#{item.price}€" %></h5>
                   <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur!</p>
