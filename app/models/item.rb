@@ -1,5 +1,5 @@
 class Item < ApplicationRecord
-  validates :title, presence: true
+  validates :title, presence: true, uniqueness: true
   validates :description, presence: true
   validates :price, presence: true
   validates :image_url, uniqueness: true
