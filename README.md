@@ -3,23 +3,26 @@
 ## Notre site :
 https://chatonpix.herokuapp.com/
 
+<p style="text-align:center;"><img src = "https://i.imgur.com/3wld7Pp.gif" style = "center" ></img>
+
 ## Les fonctionalités
 (décrire brièvement ce qu'il est possible de faire/voir)
 
 - Photos de chats 
 (vue index et détail par image + ajout au panier)
 
-- Profil utilisateur
-
+- L'utilisateur devra s'inscrire pour faire un achat
+  
 - Accès au dashboard (pour les administrateurs)
-Identifiants pour tester l'affichage dans le profil :
+  Identifiants pour tester l'affichage dans le profil :
 email : jojo@jojo.fr
 mot de passe : jeteste
 
 - Panier 
+  Possibilité de supprimer un article
 
 - Passer une commande
-
+  
 - Envoi d'email
 
 - Paiement en ligne
