@@ -31,29 +31,38 @@ class CartsController < ApplicationController
       num_cart = Cart.find_by(user_id: @id_user)
       @cart = Store.where(cart_id: num_cart.id)
 
-      @prix_total_panier = 0
+      @prix_total_panier_float = 0.0
+      @item_prix_float = 0.0
       @cart.each do |i|
-        @prix_total_panier += Item.find(i.item_id).price.to_i+ "0.#{Item.find(i.item_id).price.split(",")[1]}".to_f
+        @item_prix_float = Item.find(i.item_id).price.to_i+ "0.#{Item.find(i.item_id).price.split(",")[1]}".to_f
+        @prix_total_panier_float += @item_prix_float
       end
+
+      @prix_total_panier_float.round(2)
+      @prix_total_panier_string = "#{@prix_total_panier_float.to_i},#{@prix_total_panier_float.to_s.split(".")[1]}"
+
     end
   end
 
   def pay
-    @prix_total_to_pay = params[:money]
+    @to_pay_string = params[:money]
+    @to_pay_float = "#{@to_pay_string.to_i}.#{@to_pay_string.split(",")[1]}".to_f
+
+    if user_signed_in?
+      Order.create(user_id: current_user.id, prix_total: @to_pay_string)
 
     puts "===================================="
     puts "Je suis le controler pay"
     UserMailer.contact.delivery_now
     puts "var:" + @var.to_s
     puts "===================================="
-    @prix_total_float = "#{@prix_total_to_pay.to_i},#{@prix_total_to_pay.to_s.split(".")[1]}"
-    Order.create(user_id: current_user.id, prix_total: @prix_total_to_pay)
 
-    # vide le panier
+      # vide le panier
 
-    Store.where(cart_id: Cart.find_by(user_id: current_user.id)).each do |i|
+      Store.where(cart_id: Cart.find_by(user_id: current_user.id)).each do |i|
+        i.destroy
+      end
 
-      i.destroy
     end
   end
 
