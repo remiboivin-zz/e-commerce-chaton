@@ -298,11 +298,8 @@ DEPENDENCIES
   spring
   spring-watcher-listen (~> 2.0.0)
   sqlite3
-<<<<<<< HEAD
-  therubyracer
-=======
   stripe
->>>>>>> development
+  therubyracer
   turbolinks (~> 5)
   tzinfo-data
   uglifier
