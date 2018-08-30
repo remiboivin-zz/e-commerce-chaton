@@ -1,0 +1,117 @@
+=> Booting Puma
+=> Rails 5.2.1 application starting in development 
+=> Run `rails server -h` for more startup options
+Puma starting in single mode...
+* Version 3.12.0 (ruby 2.5.1-p57), codename: Llamas in Pajamas
+* Min threads: 5, max threads: 5
+* Environment: development
+* Listening on tcp://0.0.0.0:3000
+Use Ctrl-C to stop
+Started GET "/carts/show" for 127.0.0.1 at 2018-08-30 11:46:24 +0200
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Processing by CartsController#show as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/carts_controller.rb:26
+  [1m[36mCart Load (0.1ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."user_id" = ? LIMIT ?[0m  [["user_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/carts_controller.rb:28
+  [1m[36mCACHE Cart Load (0.0ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."user_id" = ? LIMIT ?[0m  [["user_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/carts_controller.rb:31
+  [1m[36mStore Load (0.1ms)[0m  [1m[34mSELECT "stores".* FROM "stores" WHERE "stores"."cart_id" = ?[0m  [["cart_id", 1]]
+  ↳ app/controllers/carts_controller.rb:35
+  Rendering carts/show.html.erb within layouts/application
+  Rendered carts/show.html.erb within layouts/application (0.8ms)
+  Rendered layouts/_header.html.erb (0.7ms)
+Completed 200 OK in 169ms (Views: 139.0ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/carts/vendor/bootstrap/css/bootstrap.min.css" for 127.0.0.1 at 2018-08-30 11:46:24 +0200
+Started GET "/carts/css/shop-homepage.css" for 127.0.0.1 at 2018-08-30 11:46:24 +0200
+  
+  
+ActionController::RoutingError (No route matches [GET] "/carts/vendor/bootstrap/css/bootstrap.min.css"):
+ActionController::RoutingError (No route matches [GET] "/carts/css/shop-homepage.css"):
+  
+  
+actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+actionpack (5.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/carts/pay/0," for 127.0.0.1 at 2018-08-30 11:46:49 +0200
+Processing by CartsController#pay as HTML
+  Parameters: {"money"=>"0,"}
+====================================
+Je suis le controler pay
+====================================
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/carts_controller.rb:49
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/carts_controller.rb:49
+  [1m[36mOrder Create (0.4ms)[0m  [1m[32mINSERT INTO "orders" ("user_id", "prix_total", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["user_id", 1], ["prix_total", "0,"], ["created_at", "2018-08-30 09:46:49.199339"], ["updated_at", "2018-08-30 09:46:49.199339"]]
+  ↳ app/controllers/carts_controller.rb:49
+  [1m[35m (1166.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/carts_controller.rb:49
+  [1m[36mCart Load (0.6ms)[0m  [1m[34mSELECT  "carts".* FROM "carts" WHERE "carts"."user_id" = ? LIMIT ?[0m  [["user_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/carts_controller.rb:53
+  [1m[36mStore Load (0.5ms)[0m  [1m[34mSELECT "stores".* FROM "stores" WHERE "stores"."cart_id" = ?[0m  [["cart_id", 1]]
+  ↳ app/controllers/carts_controller.rb:53
+  Rendering carts/pay.html.erb within layouts/application
+  Rendered carts/pay.html.erb within layouts/application (1.2ms)
+  Rendered layouts/_header.html.erb (0.8ms)
+Completed 200 OK in 1252ms (Views: 53.2ms | ActiveRecord: 1168.9ms)
+
+
+- Gracefully stopping, waiting for requests to finish
+=== puma shutdown: 2018-08-30 11:53:17 +0200 ===
+- Goodbye!
+Exiting
