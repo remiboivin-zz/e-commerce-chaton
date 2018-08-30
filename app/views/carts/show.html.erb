@@ -38,9 +38,9 @@
 
 	<% end %>
 
-	<h2 class="total"><b>Total :</b> <%= @prix_total_panier %> €</h2>
+	<h2 class="total"><b>Total :</b> <%= @prix_total_panier_float %> € </h2>
 
-	<a class="btn btn-success" href="/carts/pay/<%= @prix_total_panier.to_i%>,<%= @prix_total_panier.to_s.split(".")[1]%>">Passer commande</a>
+	<a class="btn btn-success" href="<%= payment_path( @prix_total_panier_string ) %>">Passez commande</a>
 
 </body>
 </html>

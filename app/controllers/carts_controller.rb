@@ -31,21 +31,24 @@ class CartsController < ApplicationController
       num_cart = Cart.find_by(user_id: @id_user)
       @cart = Store.where(cart_id: num_cart.id)
 
-      @prix_total_panier = 0
+      @prix_total_panier_float = 0.0
+      @item_prix_float = 0.0
       @cart.each do |i|
-        @prix_total_panier += Item.find(i.item_id).price.to_i+ "0.#{Item.find(i.item_id).price.split(",")[1]}".to_f
+        @item_prix_float = Item.find(i.item_id).price.to_i+ "0.#{Item.find(i.item_id).price.split(",")[1]}".to_f
+        @prix_total_panier_float += @item_prix_float
       end
+
+      @prix_total_panier_string = "#{@prix_total_panier_float.to_i},#{@prix_total_panier_float.to_s.split(".")[1]}"
+
     end
   end
 
   def pay
-    @prix_total_to_pay = params[:money]
-
-
-    @prix_total_float = "#{@prix_total_to_pay.to_i},#{@prix_total_to_pay.to_s.split(".")[1]}"
+    @to_pay_string = params[:money]
+    @to_pay_float = "#{@to_pay_string.to_i}.#{@to_pay_string.split(",")[1]}".to_f
 
     if user_signed_in?
-      Order.create(user_id: current_user.id, prix_total: @prix_total_to_pay)
+      Order.create(user_id: current_user.id, prix_total: @to_pay_string)
 
       # vide le panier
 

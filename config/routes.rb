@@ -7,7 +7,7 @@ Rails.application.routes.draw do
   
   get '/carts/edit/:id_item_to_del', to: 'carts#edit'
   get '/carts/show/', to: 'carts#show'
-  get '/carts/pay/:money', to: 'carts#pay'
+  get '/carts/pay/:money', to: 'carts#pay', as: 'payment' # -> /carts/pay/payment
   # get '/users/:un_nom_de_variable', to: 'users#méthode', as: 'ton_nom_de_path_trop_cool'
 
   get '/item/:id_item_detail', to: 'items#show'
