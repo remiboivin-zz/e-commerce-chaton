@@ -22,11 +22,13 @@
 					</tr>
 				</thead>
 				<tbody>
-					<% @order.each do |info| %>
-						<tr>
-						<td><%= info.id %></td>
-						<td><%= info.prix_total %></td>
-						</tr>
+					<% if Order.find_by(user_id: @id_user) != nil %>
+						<% @order.each do |info| %>
+							<tr>
+							<td><%= info.id %></td>
+							<td><%= info.prix_total %></td>
+							</tr>
+						<% end %>
 					<% end %>
 				</tbody>
 			</table>
