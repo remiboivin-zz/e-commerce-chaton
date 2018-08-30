@@ -50,7 +50,10 @@ class CartsController < ApplicationController
 
     if user_signed_in?
       Order.create(user_id: current_user.id, prix_total: @to_pay_string)
-
+        @admins = User.where(admin: true)
+        @admins.each do |admin|
+          UserMailer.contact_admin.delivery_now
+        end
     puts "===================================="
     puts "Je suis le controler pay"
     UserMailer.contact.delivery_now
