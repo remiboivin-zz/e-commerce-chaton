@@ -15,15 +15,16 @@ https://chatonpix.herokuapp.com/
   
 - Accès au dashboard (pour les administrateurs)
   Identifiants pour tester l'affichage dans le profil :
-email : jojo@jojo.fr
-mot de passe : jeteste
+  
+    - email : jojo@jojo.fr
+    - mot de passe : jeteste
 
 - Panier 
-  Possibilité de supprimer un article
+   - Possibilité de supprimer un article
 
 - Passer une commande
   
-- Envoi d'email
+- Envoi d'email de confirmation
 
 - Paiement en ligne avec Stripe
 
