@@ -38,13 +38,13 @@ class CartsController < ApplicationController
         @prix_total_panier_float += @item_prix_float
       end
 
+      @prix_total_panier_float.round(2)
       @prix_total_panier_string = "#{@prix_total_panier_float.to_i},#{@prix_total_panier_float.to_s.split(".")[1]}"
 
     end
   end
 
   def pay
-<<<<<<< HEAD
     @to_pay_string = params[:money]
     @to_pay_float = "#{@to_pay_string.to_i}.#{@to_pay_string.split(",")[1]}".to_f
 
