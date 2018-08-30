@@ -91,14 +91,11 @@ GEM
       railties (>= 3.2, < 6.0)
     globalid (0.4.1)
       activesupport (>= 4.2.0)
-<<<<<<< HEAD
     haml (5.0.4)
       temple (>= 0.8.0)
       tilt
-=======
     http-cookie (1.0.3)
       domain_name (~> 0.5)
->>>>>>> c16fb03b6de24dcb562d03b1293c8ebb61ab2acb
     i18n (1.1.0)
       concurrent-ruby (~> 1.0)
     io-like (0.3.0)
@@ -148,11 +145,8 @@ GEM
     minitest (5.11.3)
     msgpack (1.2.4)
     multi_json (1.13.1)
-<<<<<<< HEAD
     nested_form (0.3.2)
-=======
     netrc (0.11.0)
->>>>>>> c16fb03b6de24dcb562d03b1293c8ebb61ab2acb
     nio4r (2.3.1)
     nokogiri (1.8.4)
       mini_portile2 (~> 2.3.0)
