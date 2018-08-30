@@ -43,7 +43,8 @@ class CartsController < ApplicationController
 
     puts "===================================="
     puts "Je suis le controler pay"
-              UserMailer.contact
+    UserMailer.contact.delivery_now
+    puts "var:" + @var.to_s
     puts "===================================="
     @prix_total_float = "#{@prix_total_to_pay.to_i},#{@prix_total_to_pay.to_s.split(".")[1]}"
     Order.create(user_id: current_user.id, prix_total: @prix_total_to_pay)
