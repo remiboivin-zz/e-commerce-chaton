@@ -17,6 +17,8 @@ def create
     :currency    => 'EUR'
   )
 
+  redirect_to :root
+
 rescue Stripe::CardError => e
   flash[:error] = e.message
   redirect_to :root
