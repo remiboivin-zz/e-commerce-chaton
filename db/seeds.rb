@@ -19,8 +19,9 @@ require 'faker'
 
 puts "--- Création de l'admin ---"
 User.create(
-	email: "admin@admin.com",
-	password: 'jeteste'
+	email: "jojo@jojo.fr",
+	password: 'jeteste',
+	admin: true
 )
 
 # nb_de_user.times do |i|
