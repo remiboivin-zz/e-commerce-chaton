@@ -22,7 +22,12 @@
 					</tr>
 				</thead>
 				<tbody>
-
+					<% @order.each do |info| %>
+						<tr>
+						<td><%= info.id %></td>
+						<td><%= info.prix_total %></td>
+						</tr>
+					<% end %>
 				</tbody>
 			</table>
 		</div>
