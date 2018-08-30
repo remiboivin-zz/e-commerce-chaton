@@ -2,7 +2,7 @@ require 'mailjet'
 
 class UserMailer < ApplicationMailer
 
-    def contact()
+    def contact
       Mailjet.configure do |config|
         config.api_key = '3c6830e7960ed7aa8e590777da567b5b'
         config.secret_key = 'd289d0234577fba0373903cd457bb254'
@@ -10,9 +10,6 @@ class UserMailer < ApplicationMailer
         config.api_version = "v3.1"
       end
     #@user = user
-    puts "======================================="
-    puts "Je suis le mailler"
-    puts "======================================="
     variable = Mailjet::Send.create(messages: [{
         'From'=> {
             'Email'=> 'remi50avJ.C@live.fr',

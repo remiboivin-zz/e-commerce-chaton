@@ -22,7 +22,7 @@ ActiveRecord::Schema.define(version: 2018_08_30_091419) do
   create_table "items", force: :cascade do |t|
     t.string "title"
     t.text "description"
-    t.decimal "price"
+    t.string "price"
     t.string "image_url"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
