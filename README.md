@@ -50,8 +50,8 @@ $ rails s
 
 ## L'équipe
 
-° Rémi Boivin 🤖
-° Gwendoline Cassand 👩‍💻
-° Mai Lan Peng 👻
-° Joanne Rabenarisoa 😽
+➢ Rémi Boivin 🤖
+➢ Gwendoline Cassand 👩‍💻
+➢ Mai Lan Peng 👻
+➢ Joanne Rabenarisoa 😽
 
