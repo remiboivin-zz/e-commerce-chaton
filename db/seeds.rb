@@ -6,17 +6,22 @@ num_cart_a_remplir = 3
 
 require 'faker'
 
-nb_d_item.times do |i|
-  Item.create(
-    title: Faker::Dog.breed,
-    description: Faker::Movie.quote,
-    price: "#{rand(1..400)},#{rand(0..99)}",
-    image_url: "chaton#{i}.jpg"
-  )
-  puts "Création de l'Item N°#{i}."
-end
-puts
+# nb_d_item.times do |i|
+#   Item.create(
+#     title: Faker::Dog.breed,
+#     description: Faker::Movie.quote,
+#     price: "#{rand(1..400)},#{rand(0..99)}",
+#     image_url: "chaton#{i}.jpg"
+#   )
+#   puts "Création de l'Item N°#{i}."
+# end
+# puts
 
+puts "--- Création de l'admin ---"
+User.create(
+	email: "admin@admin.com",
+	password: 'jeteste'
+)
 
 # nb_de_user.times do |i|
 #   User.create(
