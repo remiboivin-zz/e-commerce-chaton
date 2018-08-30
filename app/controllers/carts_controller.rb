@@ -54,12 +54,9 @@ class CartsController < ApplicationController
         @admins.each do |admin|
           UserMailer.contact_admin.delivery_now
         end
-    puts "===================================="
-    puts "Je suis le controler pay"
-    UserMailer.contact.delivery_now
-    puts "var:" + @var.to_s
-    puts "===================================="
-
+        puts "Envoie du mail\n"
+        UserMailer.contact.delivery_now
+        puts "Mail envoyé\n"
       # vide le panier
 
       Store.where(cart_id: Cart.find_by(user_id: current_user.id)).each do |i|
