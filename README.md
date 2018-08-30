@@ -47,6 +47,7 @@ $ ajouter les crédentials de test Stripe dans le fichier .bash_profile (https:/
 ```sh
 $ rails s
 ```
+❗️Pour afficher les images, décommente la partie qui crée des Items dans le seed.rb puis fais rails db : seed 
 
 ## L'équipe
 
