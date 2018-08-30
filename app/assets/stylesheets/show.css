@@ -34,7 +34,7 @@ ul {
 	position: relative;
 }
 
-h2 {
+h2.total {
 	font-size: 18px;
 	background-color: #EDEDED;
 	color: #5E5E5E;

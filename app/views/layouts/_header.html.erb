@@ -5,7 +5,7 @@
       <span class="navbar-toggler-icon"></span>
     </button>
   <div class="collapse navbar-collapse" id="navbarResponsive">
-    <ul class="navbar-nav ml-auto">
+    <ul class="navbar-nav ml-auto" style="align-items: center;">
   <!-- Affichage des liens divers -->
       <li class="nav-item active">
         <a class="link-navbar" href=<%= root_path %> >Accueil
@@ -15,7 +15,7 @@
   <!-- Affichage des boutons Log in/Log out etc... -->
     <% if user_signed_in? %> <!-- Connecté -->
       <li class="nav-item">
-        <a class="link-navbar" href="/profil">Mon Profil</a>
+        <a class="link-navbar" href="/profil" style="margin-right: 10px;">Mon Profil</a>
       </li>
       <li class="nav-item">
         <a class="btn btn-warning nav-link" href=<%= edit_user_registration_path %> >Edit</a>
