@@ -1,3 +1,13 @@
 <br><br>
-<h1>Vous devez payez <%= @prix_total_to_pay.class %> </h1>
-<h1>Vous devez payez <%= @prix_total_to_pay %> </h1>
+
+<% if user_signed_in? %>
+	<h1>Vous devez payez <%= @prix_total_to_pay.class %> </h1>
+	<h1>Vous devez payez <%= @prix_total_to_pay %> </h1>
+
+<% else %>
+	<div class="alert alert-danger" role="alert" style="text-align: center;">
+		<br>
+		Connecte-toi pour passez une commande!
+		<br>
+	</div>
+<% end %>
