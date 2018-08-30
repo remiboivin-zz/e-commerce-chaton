@@ -41,13 +41,17 @@ class CartsController < ApplicationController
   def pay
     @prix_total_to_pay = params[:money]
 
-
+    puts "===================================="
+    puts "Je suis le controler pay"
+              UserMailer.contact
+    puts "===================================="
     @prix_total_float = "#{@prix_total_to_pay.to_i},#{@prix_total_to_pay.to_s.split(".")[1]}"
     Order.create(user_id: current_user.id, prix_total: @prix_total_to_pay)
 
     # vide le panier
 
     Store.where(cart_id: Cart.find_by(user_id: current_user.id)).each do |i|
+
       i.destroy
     end
   end

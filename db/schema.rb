@@ -19,11 +19,6 @@ ActiveRecord::Schema.define(version: 2018_08_30_091419) do
     t.index ["user_id"], name: "index_carts_on_user_id"
   end
 
-  create_table "carts_items", id: false, force: :cascade do |t|
-    t.integer "cart_id", null: false
-    t.integer "item_id", null: false
-  end
-
   create_table "items", force: :cascade do |t|
     t.string "title"
     t.text "description"
