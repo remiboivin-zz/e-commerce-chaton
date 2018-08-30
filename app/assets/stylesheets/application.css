@@ -13,10 +13,10 @@
  *= require_tree .
  *= require_self
  */
-@import url("show.css")
+/*@import url("show.css")
 @import url("edit.css")
 @import url("header.css")
-@import url("itemdetails.css")
+@import url("itemdetails.css")*/
 
 
 img{
