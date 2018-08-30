@@ -4,6 +4,7 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 ruby '2.5.1'
 gem 'faker'
 gem 'devise'
+gem 'mailjet'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.0'
 group :development, :test do
@@ -15,6 +16,7 @@ group :production do
 end
 # Use Puma as the app server
 gem 'puma', '~> 3.11'
+gem 'rails_admin', '~> 1.3'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets

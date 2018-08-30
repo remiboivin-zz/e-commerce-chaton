@@ -44,17 +44,25 @@ class CartsController < ApplicationController
   end
 
   def pay
+<<<<<<< HEAD
     @to_pay_string = params[:money]
     @to_pay_float = "#{@to_pay_string.to_i}.#{@to_pay_string.split(",")[1]}".to_f
 
     if user_signed_in?
       Order.create(user_id: current_user.id, prix_total: @to_pay_string)
 
+    puts "===================================="
+    puts "Je suis le controler pay"
+    UserMailer.contact.delivery_now
+    puts "var:" + @var.to_s
+    puts "===================================="
+
       # vide le panier
 
       Store.where(cart_id: Cart.find_by(user_id: current_user.id)).each do |i|
         i.destroy
       end
+
     end
   end
 
