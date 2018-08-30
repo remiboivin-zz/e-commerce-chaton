@@ -34,9 +34,17 @@ https://chatonpix.herokuapp.com/
 ## Visualiser le site en local
 ```sh
 $ bundle install --without production
+```
+```sh
 $ rails db:migrate
+```
+```sh
 $ rails db:seed
+```
+```sh
 $ ajouter les crédentials de test Stripe dans le fichier .bash_profile (https://stripe.com/docs/checkout/rails)
+```
+```sh
 $ rails s
 ```
 
