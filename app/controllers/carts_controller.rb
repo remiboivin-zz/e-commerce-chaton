@@ -38,7 +38,7 @@ class CartsController < ApplicationController
         @prix_total_panier_float += @item_prix_float
       end
 
-      @prix_total_panier_float.round(2)
+      @prix_total_panier_float = @prix_total_panier_float.round(2)
       @prix_total_panier_string = "#{@prix_total_panier_float.to_i},#{@prix_total_panier_float.to_s.split(".")[1]}"
 
     end
