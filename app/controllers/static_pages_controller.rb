@@ -11,11 +11,11 @@ class StaticPagesController < ApplicationController
 
   def profil
       @id_user = current_user.id
-      @order_id = Order.find_by(user_id: @id_user).id
-      # @user_order_id = Order.find_by(user_id: @id_user)
 
-      # @order = User.where(id: @user_order_id)
-      @order = Order.where(user_id: current_user.id)
+      if Order.find_by(user_id: @id_user) != nil
+        @order_id = Order.find_by(user_id: @id_user).id
+        @order = Order.where(user_id: current_user.id)
+      end
   end
 
 end
