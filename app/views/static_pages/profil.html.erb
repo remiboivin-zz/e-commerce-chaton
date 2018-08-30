@@ -10,6 +10,11 @@
 	<strong>Modifier mes informations : </strong>
 	<a class="" href=<%= edit_user_registration_path %> >Editer</a> 
 	</p>
+
+	<% if current_user.admin == true %>
+		<p class="link-admin">Dashboard admin : <a href="/admin">Accéder</a></p>
+	<% end %>
+
 	</div> <!-- fin container 1 -->
 
 	<h2>Mes commandes :</h2>
