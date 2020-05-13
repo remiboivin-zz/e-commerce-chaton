@@ -3,7 +3,7 @@
 		<div class="container">
 			<div class="item-image">
 				<%= image_tag("/#{@item.image_url}", size: "600x400") %>
-				<span class="desc-text"><b>Description :</b> <%= @item.description %></span> 
+				<span class="desc-text"><b>Description :</b> <%= @item.description %></span>
 			</div>
 
 			<div class="columns">
@@ -13,7 +13,9 @@
 				<li>Papier glacé</li>
 				<li>Format HD</li>
 				<% if user_signed_in? %>
-					<li class="button"><a href="/item/add/<%= @id_to_send %>" class="button">AJOUTER AU PANIER</a></li>
+					<li class="button">
+						<!-- # TODO: create translation -->
+						<%= link_to 'AJOUTER AU PANIER', item_add_url(@item.id) %>
 				<% else %>
 					<li class="button"><a href="<%= new_user_registration_path %>" class="button">S'INSCRIRE</a></li>
 				<% end %>

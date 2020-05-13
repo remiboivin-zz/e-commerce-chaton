@@ -4,19 +4,16 @@ class ItemsController < ApplicationController
   end
 
   def show
-  	@id_to_send = params[:id_item_detail]
-  	@id_item_detail = params[:id_item_detail]
-  	@item = Item.find(params[:id_item_detail])
+    @item = Item.find(params[:item_id])
   end
 
   def add
-  	@id_item = params[:id_item_to_add].to_i
-  	@item = Item.find(@id_item)
+    @id_item = params[:item_id].to_i
+    @item = Item.find(@id_item)
 
-  	mon_ajout = Store.new(cart_id: Cart.find_by(user_id: current_user.id).id, item_id: @item.id)
-  	mon_ajout.save
-  	# redirect_to "/item/#{@id_item}"
-  	redirect_to "/"
+    mon_ajout = Store.new(cart_id: Cart.find_by(user_id: current_user.id).id, item_id: @item.id)
+    mon_ajout.save
+    redirect_to root_path
   end
 
 end

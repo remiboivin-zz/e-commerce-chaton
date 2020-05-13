@@ -8,31 +8,32 @@
     <ul class="navbar-nav ml-auto" style="align-items: center;">
   <!-- Affichage des liens divers -->
       <li class="nav-item active">
-        <a class="link-navbar" href=<%= root_path %> >Accueil
+        <a class="link-navbar" href=<%= root_path %> ><%= t('front.header.root') %>
         <span class="sr-only">(current)</span>
         </a>
       </li>
   <!-- Affichage des boutons Log in/Log out etc... -->
     <% if user_signed_in? %> <!-- Connecté -->
       <li class="nav-item">
-        <a class="link-navbar" href="/profil" style="margin-right: 10px;">Mon Profil</a>
+        <!-- <a class="link-navbar" href="/profil" style="margin-right: 10px;">Mon Profil</a> -->
+        <%= link_to t('front.header.profile'), profil_path, class: "link-navbar" %>
       </li>
       <li class="nav-item">
-        <a class="btn btn-warning nav-link" href=<%= edit_user_registration_path %> >Edit</a>
-        <%= link_to "Se déconnecter", destroy_user_session_path , method: :delete, class: "btn btn-danger nav-link" %>
+        <%= link_to t('front.devise.edit'), edit_user_registration_path, class: "btn btn-warning nav-link" %>
+        <%= link_to t('front.devise.sign_out'), destroy_user_session_path , method: :delete, class: "btn btn-danger nav-link" %>
       </li>
       <li class="nav-item">
-        <a href="/carts/show"><img class="basket-icon" src="/basket-icon.png"></a>
+         <%= link_to image_tag('/basket-icon.png', class: 'basket-icon'), cart_path(1)%>
       </li>
-    <% else %> <!-- Pas connecté --> 
+    <% else %> <!-- Pas connecté -->
       <li class="nav-item">
-        <a class="btn btn-info nav-link" href=<%= new_user_session_path %> >Se connecter</a>
+        <%= link_to link_to t('front.devise.sign_in'), new_user_session_path, class: 'btn btn-info nav-link '%>
       </li>
       <li class="nav-item">
-        <a class="btn btn-success nav-link" href=<%= new_user_registration_path %> >S'inscrire</a>
+        <%= link_to link_to t('front.devise.sign_up'), new_user_registration_path, class: 'btn btn-success nav-link '%>
       </li>
   <% end %>
     </ul>
-  </div> <!-- fin collapse --> 
+  </div> <!-- fin collapse -->
   </div> <!-- fin container -->
 </nav>

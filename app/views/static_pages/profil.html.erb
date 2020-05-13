@@ -1,56 +1,55 @@
 <div class="wrapper">
-<% if user_signed_in? %>
-	
-	<h1 class="profile-title">Mon profil</h1>
-	
+	<% if user_signed_in? %>
+
+	<h1 class="profile-title"><%= t('front.profile.title') %></h1>
+
 	<div class="container">
-	<p><strong> Email: </strong> <%= User.find(current_user.id).email %></p>
+		<p><strong><%= t('front.profile.email') %></strong> <%= User.find(current_user.id).email %></p>
 
-	<p>
-	<strong>Modifier mes informations : </strong>
-	<a class="" href=<%= edit_user_registration_path %> >Editer</a> 
-	</p>
+		<p>
+			<strong><%= t('front.profile.edit_informations') %></strong>
+			<a class="" href=<%= edit_user_registration_path %><%= t('front.profile.link.edit') %></a>
+		</p>
 
-	<% if current_user.admin == true %>
-		<p class="link-admin">Dashboard admin : <a href="/admin">Accéder</a></p>
-	<% end %>
+		<% if current_user.admin == true %>
+		<p class="link-admin"><%= t('front.profile.dash_admin') %><a href="/admin"><%= t('front.profile.link.access') %></a></p>
+		<% end %>
 
 	</div> <!-- fin container 1 -->
 
-	<h2>Mes commandes :</h2>
+	<h2><%= t('front.profile.order.title') %></h2>
 	<div class="container">
-			<table class="table">
-				<thead>
-					<tr>
-					<th scope="col">Commande n°</th>
-					<th scope="col">Prix total</th>
-					</tr>
-				</thead>
-				<tbody>
-					<% if Order.find_by(user_id: @id_user) != nil %>
-						<% @order.each do |info| %>
-							<tr>
-							<td><%= info.id %></td>
-							<td><%= info.prix_total %></td>
-							</tr>
-						<% end %>
-					<% else %>
-						<tr>
-							<td><i>Tu n'as pas encore de commande.</i></td>
-						</tr>
-					<% end %>
-				</tbody>
-			</table>
-		</div>
-	</div> <!-- fin container 2 -->
-	
-	
+		<table class="table">
+			<thead>
+				<tr>
+					<th scope="col"><%= t('front.profile.order.number') %></th>
+					<th scope="col"><%= t('front.profile.order.price') %></th>
+				</tr>
+			</thead>
+			<tbody>
+				<% if Order.find_by(user_id: @id_user) != nil %>
+				<% @order.each do |info| %>
+				<tr>
+					<td><%= info.id %></td>
+					<td><%= info.prix_total %></td>
+				</tr>
+				<% end %>
+				<% else %>
+				<tr>
+					<td><i><%= t('front.profile.error.empty') %></i></td>
+				</tr>
+				<% end %>
+			</tbody>
+		</table>
+	</div>
+</div> <!-- fin container 2 -->
+
+
 <!-- Si utilisateur non connecté -->
 <% else %>
-	<div class="alert alert-danger" role="alert" style="text-align: center;">
-		<br>
-		Connecte-toi pour voir ton profil !
-		<br>
-	</div>
-<% end %>
+<div class="alert alert-danger" role="alert" style="text-align: center;">
+	<br>
+	<%= t('front.profile.error.not_signin') %>
+	<br>
 </div>
+<% end %>

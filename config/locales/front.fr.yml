@@ -1,0 +1,41 @@
+# Additional translations at https://github.com/plataformatec/devise/wiki/I18n
+
+fr:
+  front:
+    cart:
+      article: 'Article: '
+      basket_number: 'Numéro du panier: '
+      basket: 'Ton panier: '
+      buy: 'Payer'
+      delete: 'Supprimer'
+      email: 'Email: '
+      error:
+        not_signin: 'Connecte-toi pour voir le panier !'
+      id: 'ID: '
+      price: 'Prix: '
+    devise:
+      cancel: 'Supprimer mon compte'
+      edit: 'Éditer votre profil'
+      sign_in: 'Se connecter'
+      sign_out: 'Se déconnecter'
+      sign_up: "S'inscrire"
+    footer:
+        legal: 'Copyright (c) 2018 Copyright Holder All Rights Reserved.'
+    header:
+      profile: 'Profil'
+      root: 'Acceuil'
+    profile:
+      dash_admin: 'Dashboard admin: '
+      edit_informations: 'Modifier mes informations: '
+      email: 'Email: '
+      error:
+        empty: Tu n'as pas encore de commande.
+        not_signin: ''
+      links:
+        edit: 'Editer'
+        access: 'Accéder'
+      order:
+        title: 'Mes commandes: '
+        number: 'Commande n°'
+        price: 'Prix total'
+      title: 'Mon profil'

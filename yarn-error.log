@@ -1,0 +1,45 @@
+Arguments: 
+  /Users/opsone/.nodenv/versions/10.19.0/bin/node /Users/opsone/.nodenv/versions/10.19.0/bin/yarn
+
+PATH: 
+  /Users/opsone/.nodenv/versions/10.19.0/bin:/usr/local/Cellar/nodenv/1.3.2/libexec:/Users/opsone/.nodenv/shims:/Users/opsone/.rbenv/shims:/Users/opsone/.rbenv/shims/yarn:/usr/local/sbin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:
+
+Yarn version: 
+  1.22.4
+
+Node version: 
+  10.19.0
+
+Platform: 
+  darwin x64
+
+Trace: 
+  TypeError [ERR_INVALID_ARG_TYPE]: The "path" argument must be of type string. Received type object
+      at validateString (internal/validators.js:125:11)
+      at Object.isAbsolute (path.js:1136:5)
+      at module.exports.exports.default (/Users/opsone/.nodenv/versions/10.19.0/lib/node_modules/yarn/lib/cli.js:101023:16)
+      at /Users/opsone/.nodenv/versions/10.19.0/lib/node_modules/yarn/lib/cli.js:51524:63
+      at Generator.next (<anonymous>)
+      at step (/Users/opsone/.nodenv/versions/10.19.0/lib/node_modules/yarn/lib/cli.js:310:30)
+      at /Users/opsone/.nodenv/versions/10.19.0/lib/node_modules/yarn/lib/cli.js:321:13
+
+npm manifest: 
+  {
+      "name": "e-commerce",
+      "private": true,
+      "dependencies": {
+  	"dependencies": {
+  	    "@rails/ujs": "^6.0.0",
+  	    "turbolinks": "^5.2.0",
+  	    "@rails/activestorage": "^6.0.0",
+  	    "@rails/actioncable": "^6.0.0"
+  	},
+  	"version": "0.1.0"
+      }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile

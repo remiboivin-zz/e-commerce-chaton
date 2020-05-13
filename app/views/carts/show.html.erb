@@ -2,24 +2,24 @@
 	<% if !user_signed_in? %>
 		<br>
 		<div class="alert alert-danger" role="alert" style="text-align: center;">
-			Connecte-toi pour voir le panier !
+			<%= t('front.cart.error.not_signin') %>
 		</div>
 	<% else %>
 		<div class="container">
-			<h3>Ton panier :</h3>
+			<h3><%= t('front.cart.basket') %></h3>
 			<div class="info-cart">
-				<span>Email :</span> <%= @name_user %><br>
-				<span>ID:</span> <%= @id_user %><br>
-				<span>Numéro du panier : <%= @cart_id %></span> 
+				<span><%= t('front.cart.email') %></span> <%= @name_user %><br>
+				<span><%= t('front.cart.id') %></span> <%= @id_user %><br>
+				<span><%= t('front.cart.basket_number') %><%= @cart_id %></span>
 			</div>
-		
+
 		<div class="container">
 			<table class="table">
 				<thead>
 					<tr>
-					<th scope="col">#</th>
-					<th scope="col">Article</th>
-					<th scope="col">Prix</th>
+					<th scope="col"></th>
+					<th scope="col"><%= t('front.cart.article') %></th>
+					<th scope="col"><%= t('front.cart.price') %></th>
 					<th scope="col"> </th>
 					</tr>
 				</thead>
@@ -29,7 +29,7 @@
 					<th scope="row"><%= i+1 %></th>
 					<td><%= Item.find(item.item_id).title %></td>
 					<td><%= Item.find(item.item_id).price %> </td>
-					<td><a class="btn-suppr" href="/carts/edit/<%= i+1 %>" >Supprimer</a></td>
+					<td><%= link_to t('front.cart.delete'), cart_edit_url(i + 1, item.item_id), class: 'btn-suppr' %></td>
 					</tr>
 					<% end %>
 				</tbody>
@@ -38,9 +38,8 @@
 
 	<% end %>
 
-	<h2 class="total"><b>Total :</b> <%= @prix_total_panier_float %> € </h2>
-
-	<a class="btn btn-success" href="<%= payment_path( @prix_total_panier_string ) %>">Passez commande</a>
+	<h2 class="total"><b><%= t('front.cart.total') %></b> <%= @prix_total_panier_float %> € </h2>
+	<td><%= link_to t('front.cart.buy'), cart_payment_path(@cart_id, @prix_total_panier_string), class: 'btn btn-success' %></td>
 
 </body>
 
