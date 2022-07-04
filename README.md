@@ -52,7 +52,7 @@ $ rails s
 ## L'équipe
 
 - ➢ Rémi Boivin 🤖
-- ➢ Gwendoline Cassand 👩‍💻
+- ➢ Gwendoline CSD 👩‍💻
 - ➢ Mai Lan Peng 👻
 - ➢ Joanne Rabenarisoa 😽
 
